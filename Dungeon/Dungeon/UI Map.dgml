@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 Namespace=Dungeon Type=App)" Category="CodeSchema_Class" Bounds="-9551.85057942708,-9983.48655012897,62.8466666666645,26" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" CommonLabel="App" Icon="Microsoft.VisualStudio.Class.Internal" Label="App" SourceLocation="(Assembly=file:///C:/Users/Mohamed/Source/Repos/Dungeon/Dungeon/Dungeon/App.xaml.cs StartLineNumber=22 StartCharacterOffset=25 EndLineNumber=22 EndCharacterOffset=28)" UseManualLocation="True" />
+    <Node Id="@2" Category="CodeSchema_Class" Bounds="-9567.375078125,-9927.48645012897,93.3400000000001,26" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CommonLabel="MainPage" Icon="Microsoft.VisualStudio.Class.Public" Label="MainPage" SourceLocation="(Assembly=file:///C:/Users/Mohamed/Source/Repos/Dungeon/Dungeon/Dungeon/MainPage.xaml.cs StartLineNumber=22 StartCharacterOffset=32 EndLineNumber=22 EndCharacterOffset=40)" UseManualLocation="True" />
+    <Node Id="BuildCharacter" Bounds="-9774.99426980231,-9811.89366944155,100.503333333334,25.9599999999991" Label="Build Character" UseManualLocation="True" />
+    <Node Id="LoadGame" Bounds="-9613.40938210239,-9774.19851688769,80.0933333333342,25.9599999999991" Label="Load Game" />
+    <Node Id="LoadMap" Bounds="-9764.79062456623,-9698.48240985725,73.0766666666677,25.9599999999991" Label="Load Map" UseManualLocation="True" />
+    <Node Id="MainMenu" Bounds="-9633.40919921875,-9870.82629140625,212.733333333334,142.604731249994" Group="Expanded" Label="Main Menu" />
+    <Node Id="NewGame" Bounds="-9612.57173883297,-9830.82626494947,78.1666666666642,25.9599999999991" Label="New Game" UseManualLocation="True" />
+    <Node Id="Settings" Bounds="-9503.31586588541,-9774.18161379653,62.6399999999994,25.9599999999991" Label="Settings" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="(@1 Namespace=Dungeon Type=App)" Target="@2" Bounds="-9520.59593057144,-9957.48655012897,0.10418787132221,21.0002107621876" />
+    <Link Source="@2" Target="LoadGame" Bounds="-9565.97876116056,-9901.486328125,40.8073455681206,118.77640152656" />
+    <Link Source="@2" Target="NewGame" Bounds="-9562.08433033776,-9901.486328125,34.2789384480348,62.7614799276253" />
+    <Link Source="@2" Target="Settings" Bounds="-9516.53753744206,-9901.48645012897,37.6328689323491,117.389926899274" />
+    <Link Source="BuildCharacter" Target="LoadMap" Bounds="-9727.57223266486,-9785.93357421875,2.42787854075323,78.4554707000752" />
+    <Link Source="LoadGame" Target="LoadMap" Bounds="-9693.61396198887,-9748.23826171875,93.6985768277973,45.8032718794475" />
+    <Link Source="MainMenu" Target="LoadGame" Category="Contains" />
+    <Link Source="MainMenu" Target="NewGame" Category="Contains" />
+    <Link Source="MainMenu" Target="Settings" Category="Contains" />
+    <Link Source="NewGame" Target="BuildCharacter" Bounds="-9665.56069551546,-9812.95411933127,52.9895692133814,6.63271961997452" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsInternal" Label="Is Internal" Description="Flag to indicate the method is 'Internal'" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(c1f14d52-394d-4743-9057-ea060cd0b44b.OutputPathUri)" />
+    <Alias n="2" Id="(@1 Namespace=Dungeon Type=MainPage)" />
+  </IdentifierAliases>
+  <Paths>
+    <Path Id="c1f14d52-394d-4743-9057-ea060cd0b44b.OutputPathUri" Value="file:///C:/Users/Mohamed/Source/Repos/Dungeon/Dungeon/Dungeon/bin/x86/Debug/Dungeon.exe" />
+  </Paths>
+</DirectedGraph>
