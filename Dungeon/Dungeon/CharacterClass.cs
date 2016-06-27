@@ -8,7 +8,7 @@ namespace Dungeon
 {
     class CharacterClass
     {
-        private string className;
+        protected string className;
         public string name { get { return className; } }
 
         public CharacterClass()

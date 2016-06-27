@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dungeon
 {
-    class Race
+    class Human : Race
     {
-        protected string RaceName;
-        public string name { get { return RaceName; } }
-        
-        public Race()
+        public Human()
         {
-
+            RaceName = "Human";
         }
     }
 }

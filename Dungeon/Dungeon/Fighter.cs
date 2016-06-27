@@ -10,7 +10,7 @@ namespace Dungeon
     {
         public Fighter()
         {
-
+            className = "Fighter";
         }
     }
 }

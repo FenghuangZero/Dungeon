@@ -55,5 +55,16 @@ namespace Dungeon
             Charisma = CHA;
 
         }
+
+        public StatBlock(double STR, double DEX, double CON, double WIS, double INT, double CHA)
+        {
+            Strength = (int)STR;
+            Dexterity = (int)DEX;
+            Constitution = (int)CON;
+            Wisdom = (int)WIS;
+            Intelligence = (int)INT;
+            Charisma = (int)CHA;
+
+        }
     }
 }

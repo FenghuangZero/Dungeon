@@ -1,0 +1,44 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dungeon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:System="using:System"
+    x:Class="Dungeon.CharacterCreatorxaml"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="doneButton" Content="Done" HorizontalAlignment="Left" Margin="200,555,0,0" VerticalAlignment="Top" Click="doneButton_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="409" Margin="200,10,0,0" VerticalAlignment="Top" Width="150">
+            <TextBox x:Name="characterName" HorizontalAlignment="Left" Margin="0,0,-28,0" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Character Name"/>
+            <ComboBox x:Name="raceComboBox" HorizontalAlignment="Left" Margin="0,0,-20,0" VerticalAlignment="Top" Width="120" PlaceholderText="Race"/>
+            <ComboBox x:Name="classComboBox" HorizontalAlignment="Left" Margin="0,0,-20,0" VerticalAlignment="Top" Width="120" PlaceholderText="Class"/>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="strengthSlider" LargeChange="0" Maximum="18" Minimum="8" Value="8" Width="100"/>
+                <TextBlock x:Name="strengthValue" TextWrapping="Wrap" Text="{Binding Value, ElementName=strengthSlider}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="dexSlider" LargeChange="0" Maximum="18" Minimum="8" Value="8" Width="100"/>
+                <TextBlock x:Name="dexValue" TextWrapping="Wrap" Text="{Binding Value, ElementName=dexSlider}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="conSlider" LargeChange="0" Maximum="18" Minimum="8" Value="8" Width="100"/>
+                <TextBlock x:Name="conValue" TextWrapping="Wrap" Text="{Binding Value, ElementName=conSlider}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="intSlider" LargeChange="0" Maximum="18" Minimum="8" Value="8" Width="100"/>
+                <TextBlock x:Name="intValue" TextWrapping="Wrap" Text="{Binding Value, ElementName=intSlider}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="wisSlider" LargeChange="0" Maximum="18" Minimum="8" Value="8" Width="100"/>
+                <TextBlock x:Name="wisValue" TextWrapping="Wrap" Text="{Binding Value, ElementName=wisSlider}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="chaSlider" LargeChange="0" Maximum="18" Minimum="8" Value="8" Width="100"/>
+                <TextBlock x:Name="chaValue" TextWrapping="Wrap" Text="{Binding Value, ElementName=chaSlider}"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
