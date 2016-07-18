@@ -18,15 +18,15 @@ using Windows.UI.Xaml.Navigation;
 namespace Dungeon
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// A page with controls to create a character with.
     /// </summary>
-    public sealed partial class CharacterCreatorxaml : Page
+    public sealed partial class CharacterCreator : Page
     {
         List<Race> races = new List<Race>() { new Human() };
         List<CharacterClass> characterClasses = new List<CharacterClass>() { new Fighter() };
 
-        public CharacterCreatorxaml()
-        {            
+        public CharacterCreator()
+        {
             raceComboBox.ItemsSource = races;
             classComboBox.ItemsSource = characterClasses;
             this.InitializeComponent();
@@ -35,7 +35,7 @@ namespace Dungeon
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
             var race = races.ElementAt(int.Parse(raceComboBox.SelectedValue.ToString()));
-            var chosenClass = characterClasses.ElementAt(int.Parse(classComboBox.SelectedItem.ToString());
+            var chosenClass = characterClasses.ElementAt(int.Parse(classComboBox.SelectedItem.ToString()));
             var stats = new StatBlock(strengthSlider.Value,dexSlider.Value,conSlider.Value,wisSlider.Value,intSlider.Value,chaSlider.Value);
             var player = new Character(characterName.Text, chosenClass, race, stats);
         }

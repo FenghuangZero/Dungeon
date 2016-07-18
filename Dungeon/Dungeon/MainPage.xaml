@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="listView" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="newGameButton" Content="New Game"/>
+            <Button x:Name="newGameButton" Content="New Game" Click="newGameButton_Click"/>
             <Button x:Name="loadGameButton" Content="Load Game"/>
         </ListView>
 

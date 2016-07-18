@@ -26,5 +26,10 @@ namespace Dungeon
         {
             this.InitializeComponent();
         }
+
+        private void newGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CharacterCreator));
+        }
     }
 }
