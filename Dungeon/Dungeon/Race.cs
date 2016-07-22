@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dungeon
 {
-    class Race
+    public class Race
     {
         protected string RaceName;
         public string name { get { return RaceName; } }

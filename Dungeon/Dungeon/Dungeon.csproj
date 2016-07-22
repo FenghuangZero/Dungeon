@@ -102,6 +102,9 @@
     <Compile Include="CharacterCreator.xaml.cs">
       <DependentUpon>CharacterCreator.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CharacterView.xaml.cs">
+      <DependentUpon>CharacterView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fighter.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -137,6 +140,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="CharacterCreator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CharacterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

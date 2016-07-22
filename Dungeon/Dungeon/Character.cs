@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dungeon
 {
-    class Character
+    public class Character
     {
         private string Name;
         public string name { get { return Name; }  }
@@ -18,7 +18,7 @@ namespace Dungeon
         public string race { get { return Race.name; } }
 
         private StatBlock Stats;
-
+        public int statStrength { get { return Stats.STR; } }
         public  Character(string name, CharacterClass charClass, Race race, StatBlock stats)
         {
             Name = name;

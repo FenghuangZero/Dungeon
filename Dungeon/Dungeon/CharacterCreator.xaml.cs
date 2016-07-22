@@ -27,17 +27,18 @@ namespace Dungeon
 
         public CharacterCreator()
         {
+            this.InitializeComponent();
             raceComboBox.ItemsSource = races;
             classComboBox.ItemsSource = characterClasses;
-            this.InitializeComponent();
         }
 
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
-            var race = races.ElementAt(int.Parse(raceComboBox.SelectedValue.ToString()));
-            var chosenClass = characterClasses.ElementAt(int.Parse(classComboBox.SelectedItem.ToString()));
+            var race = (Race)raceComboBox.SelectedValue;
+            var chosenClass = (CharacterClass)classComboBox.SelectedItem;
             var stats = new StatBlock(strengthSlider.Value,dexSlider.Value,conSlider.Value,wisSlider.Value,intSlider.Value,chaSlider.Value);
             var player = new Character(characterName.Text, chosenClass, race, stats);
+            Frame.Navigate(typeof(CharacterView));
         }
     }
 }

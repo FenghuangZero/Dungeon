@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 
 namespace Dungeon
 {
-    class StatBlock
+    public class StatBlock
     {
         private int Strength;
+        public int STR { get { return Strength; } }
         private int Dexterity;
+        public int DEX { get { return Dexterity; } }
         private int Constitution;
+        public int CON { get { return Constitution; } }
         private int Wisdom;
+        public int WIS { get { return Wisdom; } }
         private int Intelligence;
+        public int INT { get { return Intelligence; } }
         private int Charisma;
+        public int CHA { get { return Charisma; } }
 
         public void addSTR(int stat)
         {
