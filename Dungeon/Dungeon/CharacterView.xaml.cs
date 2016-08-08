@@ -22,17 +22,11 @@ namespace Dungeon
     /// </summary>
     public sealed partial class CharacterView : Page
     {
+        Character focusedCharacter = new Character();
         public CharacterView()
         {
             this.InitializeComponent();
-        }
-        public CharacterView(Character viewedChar)
-        {
-            this.InitializeComponent();
-            characterName.Text = viewedChar.name;
-            characterClass.Text = viewedChar.charClass;
-            characterRace.Text = viewedChar.race;
-            characterStrength.Text = viewedChar.statStrength.ToString();
+            focusedCharacter = CharacterCreator.getPlayer();
         }
     }
 }

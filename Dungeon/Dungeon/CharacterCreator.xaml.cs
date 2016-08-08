@@ -24,6 +24,12 @@ namespace Dungeon
     {
         List<Race> races = new List<Race>() { new Human() };
         List<CharacterClass> characterClasses = new List<CharacterClass>() { new Fighter() };
+        public Character player = new Character();
+
+        public Character getPlayer()
+        {
+            return player;
+        }
 
         public CharacterCreator()
         {
@@ -37,7 +43,10 @@ namespace Dungeon
             var race = (Race)raceComboBox.SelectedValue;
             var chosenClass = (CharacterClass)classComboBox.SelectedItem;
             var stats = new StatBlock(strengthSlider.Value,dexSlider.Value,conSlider.Value,wisSlider.Value,intSlider.Value,chaSlider.Value);
-            var player = new Character(characterName.Text, chosenClass, race, stats);
+            player.name = characterName.Text;
+            player.setRace(race);
+            player.setClass(chosenClass);
+            player.setStats(stats);
             Frame.Navigate(typeof(CharacterView));
         }
     }
